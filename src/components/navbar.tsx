@@ -1,9 +1,12 @@
 import logo from '../images/logo2.png'
+import Link from 'next/link'
 
 const Navbar: React.FC = () => {
     return (
         <div className='w-full h-[80px] fixed pt-[25px] px-[40px] flex flex-row'>
-            <img src={logo.src} className='w-[50px] h-auto' />
+            <Link href='/'>
+                <img src={logo.src} className='w-[50px] h-auto' />
+            </Link>
 
             <div className='flex flex-row ml-auto items-center'>
                 <ul className='font-plex flex flex-row text-sm text-[#ccd6f6]'>
@@ -12,7 +15,7 @@ const Navbar: React.FC = () => {
                     </li>
 
                     <li className='ml-[25px] hover:text-[#64ffda] transition-colors duration-300'>
-                        <button><strong className='text-[#64ffda]'>02. </strong>Experience</button>
+                        <button><strong className='text-[#64ffda]'>02. </strong>Education</button>
                     </li>
 
                     <li className='ml-[25px] hover:text-[#64ffda] transition-colors duration-300'>
@@ -25,7 +28,6 @@ const Navbar: React.FC = () => {
                 </ul>
                 
                 <button className='text-[#64ffda] border-[#64ffda] border-[1px] rounded w-[80px] h-[40px] font-plex text-sm ml-[25px]'>Resume</button>
-                
             </div>  
         </div>
     )

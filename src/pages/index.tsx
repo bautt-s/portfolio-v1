@@ -3,6 +3,7 @@ import Hero from '@/components/Hero'
 import Navbar from '@/components/navbar'
 import About from '@/components/About'
 import Overlay from '@/components/Overlay'
+import Education from '@/components/Education'
 
 export default function Home() {
     return (
@@ -16,6 +17,7 @@ export default function Home() {
                 <Overlay />
                 <Hero />
                 <About />
+                <Education />
             </div>
         </>
     )

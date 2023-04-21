@@ -13,7 +13,8 @@ const Hero: React.FC = () => {
                     </p>
                 </div>
 
-                <button className='text-[#64ffda] border-[#64ffda] border-[1px] rounded w-[180px] py-[15px] font-plex mt-[50px] text-sm'>
+                <button className='text-[#64ffda] border-[#64ffda] border-[1px] rounded transition-color
+                w-[180px] py-[15px] font-plex mt-[50px] text-sm hover:bg-[#64ffdb3d] duration-300'>
                     Get in Touch!
                 </button>
             </div>
