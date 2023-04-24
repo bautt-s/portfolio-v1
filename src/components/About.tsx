@@ -1,17 +1,17 @@
-import pic from '../images/me.png'
+import pic from '../assets/me.png'
 import { RxTriangleRight } from 'react-icons/rx'
 
 const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'Node.js', 'MongoDB', 'Express.js']
 
 const About: React.FC = () => {
     return (
-        <div className='h-screen flex flex-row items-center justify-center'>
+        <div className='h-screen flex flex-row items-center justify-center' id="about">
             <div className="w-fit">
-                <h1 className="text-[#ccd6f6] text-3xl font-bold flex items-center after:content-[''] after:flex-1 after:ml-[10px] after:h-[1px] after:bg-[#324158]">
+                <h1 className="text-[#ccd6f6] text-3xl font-bold font-inter flex items-center after:content-[''] after:flex-1 after:ml-[10px] after:h-[1px] after:bg-[#324158]">
                     <span><strong className="font-plex text-[#64ffda] text-2xl">01.</strong> About Me</span>
                 </h1>
 
-                <p className='w-[550px] text-[#8892b0] mt-[35px] text-lg'>
+                <p className='w-[550px] text-[#8892b0] mt-[35px] text-lg font-inter'>
                     Hello! My name is <strong className='text-[#64ffda] font-normal'>Bautista</strong> and 
                     I enjoy creating things that live in the internet. My interest in web development 
                     started in 2020, when while finishing high school and in quarantine,

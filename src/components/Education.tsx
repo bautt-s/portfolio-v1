@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { RxTriangleRight } from 'react-icons/rx'
+import EducationText from "./EducationText"
 
 const Education: React.FC = () => {
     const [display, setDisplay] = useState({
@@ -7,7 +7,10 @@ const Education: React.FC = () => {
         title: 'Henry Bootcamp',
         timestamp: 'August 2022 - December 2022',
         items: [
-            'Learned a lot?'
+            'Started this Bootcamp in order to learn full stack web development, and graduated with plenty of good knowledge.',
+            'Learnt all about backend with Express.js, Node.js and JS/TS, as well as how to manage relational and non-relational databases, along with ORMs like Sequelize or Prisma.',
+            'I picked up good programming practices, and learnt a lot about front-end frameworks and related tools like state-management.',
+            'Managed to implement big individual and group projects, using Agile Methodology, Figma, and looking to pick up and implement new tools on the run.'
         ]
     })
 
@@ -19,7 +22,10 @@ const Education: React.FC = () => {
                     title: 'Henry Bootcamp',
                     timestamp: 'August 2022 - December 2022',
                     items: [
-                        'Learned a lot?'
+                        'Started this Bootcamp in order to learn full stack web development, and graduated with plenty of good knowledge.',
+                        'Learnt all about backend with Express.js, Node.js and JS/TS, as well as how to manage relational and non-relational databases, along with ORMs like Sequelize or Prisma.',
+                        'I picked up good programming practices, and learnt a lot about front-end frameworks and related tools like state-management.',
+                        'Managed to implement big individual and group projects, using Agile Methodology, Figma, and looking to pick up and implement new tools on the run.'
                     ]
                 })
                 break;
@@ -67,9 +73,9 @@ const Education: React.FC = () => {
     const items = ['Henry', 'Computer Science', 'English Level', 'High School']
 
     return (
-        <div className='h-screen flex flex-col items-center justify-center'>
+        <div className='h-fit flex flex-col items-center mt-[180px] pb-[280px]' id="education">
             <div className="w-fit">
-                <h1 className="text-[#ccd6f6] text-3xl font-bold flex items-center after:content-[''] after:flex-1 after:ml-[10px] after:h-[1px] after:bg-[#324158]">
+                <h1 className="text-[#ccd6f6] text-3xl font-bold font-inter flex items-center after:content-[''] after:flex-1 after:ml-[10px] after:h-[1px] after:bg-[#324158]">
                     <span><strong className="font-plex text-[#64ffda] text-2xl">02.</strong> Education</span>
                 </h1>
 
@@ -86,21 +92,7 @@ const Education: React.FC = () => {
                         })}
                     </div>
 
-                    <div className="ml-[20px]">
-                        <h1 className="font-semibold text-[#ccd6f6] text-xl">{display.title}</h1>
-                        <span className="font-plex text-[#8892b0] text-sm">{display.timestamp}</span>
-
-                        <div className="flex flex-col mt-[10px]">
-                            {display.items.map((info, index) => {
-                                return (
-                                    <div key={index} className="flex flex-row mt-[15px] items-start">
-                                        <RxTriangleRight className='text-[#64ffda] text-lg mt-[4px]' />
-                                        <p className="text-[#8892b0] ml-[10px] w-[600px]">{info}</p>
-                                    </div>
-                                )
-                            })}
-                        </div>
-                    </div>
+                    <EducationText title={display.title} timestamp={display.timestamp} items={display.items} />
                 </div>
             </div>
         </div>

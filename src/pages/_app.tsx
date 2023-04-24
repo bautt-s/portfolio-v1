@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <style jsx global>
       {`
           :root {
-            --font-rubik: ${inter.style.fontFamily};
+            --font-inter: ${inter.style.fontFamily};
             --font-plex: ${plex.style.fontFamily};
           }
         `}
