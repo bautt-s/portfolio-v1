@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Overlay: React.FC = () => {
     return (
-        <>
+        <div className='hidden md:contents'>
             <div className="w-[150px] h-[300px] fixed bottom-0 flex flex-row pl-[50px]">
                 <div className='flex flex-col justify-center after:content-[""] after:flex-1 after:ml-[10px] after:w-[1px] after:bg-[#ccd6f6]'>
                     <Link href='https://github.com/bautt-s'>
@@ -28,7 +28,7 @@ const Overlay: React.FC = () => {
                     </a>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

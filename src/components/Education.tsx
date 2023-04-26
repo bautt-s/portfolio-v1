@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { motion } from "framer-motion"
 import EducationText from "./EducationText"
 
 const Education: React.FC = () => {
@@ -73,19 +74,21 @@ const Education: React.FC = () => {
     const items = ['Henry', 'Computer Science', 'English Level', 'High School']
 
     return (
-        <div className='h-fit flex flex-col items-center mt-[180px] pb-[280px]' id="education">
-            <div className="w-fit">
-                <h1 className="text-[#ccd6f6] text-3xl font-bold font-inter flex items-center after:content-[''] after:flex-1 after:ml-[10px] after:h-[1px] after:bg-[#324158]">
-                    <span><strong className="font-plex text-[#64ffda] text-2xl">02.</strong> Education</span>
+        <div className='h-fit flex flex-col sm:items-center mt-[180px] pb-[200px] sm:pb-[280px] px-[50px] md:px-0' id="education">
+            <motion.div className="sm:w-fit"
+            initial={{ opacity: 0, translateY: -20 }} whileInView={{ opacity: 1, translateY: 0 }} transition={{ delay: 0.2, duration: 0.25 }}>
+                <h1 className="text-[#ccd6f6] text-2xl md:text-3xl font-bold font-inter flex items-center after:content-[''] after:flex-1 after:ml-[10px] after:h-[1px] after:bg-[#324158]">
+                    <span><strong className="font-plex text-[#64ffda] text-xl md:text-2xl">02.</strong> Education</span>
                 </h1>
 
-                <div className="flex flex-row mt-[40px]">
-                    <div className="flex flex-col">
+                <div className="flex flex-col sm:flex-row mt-[40px]">
+                    <div className="flex flex-row sm:flex-col w-full">
                         {items.map((item, index) => {
                             return (
                                 <button key={index} onClick={() => handleSwitch(item)}
-                                    className={`text-left font-plex border-l-2 w-[180px] px-[20px] py-[10px] hover:bg-[#112240] hover:text-[#64ffda] transition-all duration-300
-                                    text-sm ${(item === display.selected) ? 'bg-[#112240] text-[#64ffda] border-[#64ffda]' : 'bg-none text-[#8892b0] border-[#233554]'}`}>
+                                    className={`font-plex w-[180px] text-center sm:text-left px-[5px] sm:px-[20px] py-[10px] sm:border-l-2
+                                    hover:bg-[#112240] hover:text-[#64ffda] transition-all duration-300 text-sm  border-b-2 sm:border-b-0
+                                    ${(item === display.selected) ? 'bg-[#112240] text-[#64ffda] border-[#64ffda]' : 'bg-none text-[#8892b0] border-[#233554]'}`}>
                                     {item}
                                 </button>
                             )
@@ -94,7 +97,7 @@ const Education: React.FC = () => {
 
                     <EducationText title={display.title} timestamp={display.timestamp} items={display.items} />
                 </div>
-            </div>
+            </motion.div>
         </div>
     )
 }

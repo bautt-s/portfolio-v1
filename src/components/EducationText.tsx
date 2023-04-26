@@ -24,7 +24,7 @@ const EducationText: React.FC<EduProps> = (props) => {
     }
 
     return (
-        <motion.div className="ml-[20px] font-inter" initial={{opacity: 0}} variants={variants} animate={render ? 'appear' : 'normal'}>
+        <motion.div className="mt-[25px] sm:mt-0 sm:ml-[20px] font-inter" initial={{opacity: 0}} variants={variants} animate={render ? 'appear' : 'normal'}>
             <h1 className="font-semibold text-[#ccd6f6] text-xl">{title}</h1>
             <span className="font-plex text-[#8892b0] text-sm">{timestamp}</span>
 
@@ -33,7 +33,7 @@ const EducationText: React.FC<EduProps> = (props) => {
                     return (
                         <div key={index} className="flex flex-row mt-[15px] items-start">
                             <RxTriangleRight className='text-[#64ffda] text-lg mt-[4px]' />
-                            <p className="text-[#8892b0] ml-[10px] w-[550px]">{info}</p>
+                            <p className="text-[#8892b0] ml-[10px] sm:w-fit md:w-[550px]">{info}</p>
                         </div>
                     )
                 })}

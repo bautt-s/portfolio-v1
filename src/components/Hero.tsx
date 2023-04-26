@@ -1,22 +1,49 @@
+import { motion } from "framer-motion"
+import { useState, useEffect } from 'react'
+
 const Hero: React.FC = () => {
+    const [animate, setAnimate] = useState(false)
+
+    useEffect(() => {
+        setTimeout(() => setAnimate(true), 1000)
+    }, [])
+
+    const variants = {
+        render: { opacity: 1, translateY: 0 },
+    }
+
     return (
-        <div className='h-screen flex items-center'>
+        <div className='h-screen flex items-center px-[20px] sm:px-0 mb-[100px] md:mb-0'>
             <div className='flex flex-col mx-auto w-fit'>
-                <span className='font-plex text-[#64ffda] text-lg'>Hi, my name is</span>
+                <motion.span className='font-plex text-[#64ffda] text-lg'
+                    variants={variants} animate={animate && 'render'} initial={{ opacity: 0, translateY: -20 }} transition={{ delay: 0.4, duration: 0.25 }}>
+                    Hi, my name is
+                </motion.span>
 
                 <div className='font-inter mt-[15px]'>
-                    <h1 className='text-[#ccd6f6] text-7xl font-bold ml-[-5px]'>Bautista Sánchez.</h1>
-                    <h1 className='text-[#8892b0] text-7xl font-bold ml-[-5px]'>Full-stack Web Developer.</h1>
-                    <p className='w-[550px] text-[#8892b0] mt-[35px] text-lg'>
+                    <motion.h1 className='text-[#ccd6f6] text-5xl md:text-7xl font-bold ml-[-5px]'
+                        variants={variants} animate={animate && 'render'} initial={{ opacity: 0, translateY: -20 }} transition={{ delay: 0.5, duration: 0.25 }}>
+                        Bautista Sánchez.
+                    </motion.h1>
+
+                    <motion.h1 className='text-[#8892b0] text-5xl md:text-7xl font-bold ml-[-5px]'
+                        variants={variants} animate={animate && 'render'} initial={{ opacity: 0, translateY: -20 }} transition={{ delay: 0.6, duration: 0.25 }}>
+                        Full-stack Web Developer.
+                    </motion.h1>
+
+                    <motion.p className='sm:w-[550px] text-[#8892b0] mt-[35px] text-lg'
+                        variants={variants} animate={animate && 'render'} initial={{ opacity: 0, translateY: -20 }} transition={{ delay: 0.7, duration: 0.25 }}>
                         I am a web developer specializing in building (and sometimes designing) exceptional website experiences.
                         Currently, I am focused on finding my first job, and be able to put my skills to good use.
-                    </p>
+                    </motion.p>
                 </div>
 
-                <button className='text-[#64ffda] border-[#64ffda] border-[1px] rounded w-[180px] py-[15px] font-plex mt-[50px]
+                <motion.div variants={variants} animate={animate && 'render'} initial={{ opacity: 0, translateY: -20 }} transition={{ delay: 0.7, duration: 0.25 }}>
+                    <button className='text-[#64ffda] border-[#64ffda] border-[1px] rounded w-[180px] py-[15px] font-plex mt-[50px]
                 text-sm hover:shadow-[5px_5px_0_-2px_#64ffda] hover:translate-x-[-5px] hover:translate-y-[-5px] transition-all duration-300'>
-                    <a href='#contact'>Get in Touch!</a>
-                </button>
+                        <a href='#contact'>Get in Touch!</a>
+                    </button>
+                </motion.div>
             </div>
         </div>
     )
