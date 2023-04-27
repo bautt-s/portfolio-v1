@@ -6,7 +6,7 @@ const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'Node.js', 'MongoDB'
 
 const About: React.FC = () => {
     return (
-        <div className='h-screen flex flex-col md:flex-row items-center justify-center' id="about">
+        <div className='h-screen flex flex-col lg:flex-row items-center justify-center' id="about">
             <motion.div className="w-fit px-[50px] md:px-0"
             initial={{ opacity: 0, translateY: -20 }} whileInView={{ opacity: 1, translateY: 0 }} transition={{ delay: 0.2, duration: 0.25 }}>
                 <h1 className="text-[#ccd6f6] text-2xl md:text-3xl font-bold font-inter flex items-center after:content-[''] after:flex-1 after:ml-[10px] after:h-[1px] after:bg-[#324158]">
@@ -43,7 +43,7 @@ const About: React.FC = () => {
                 </div>
             </motion.div>
 
-            <motion.div className='mt-[80px] md:mt-0 ml-0 md:ml-[80px] shadow-[20px_20px_0_-2px_#0A192F,20px_20px_0_0_#64ffda]  
+            <motion.div className='mt-[80px] lg:mt-0 ml-0 lg:ml-[80px] shadow-[20px_20px_0_-2px_#0A192F,20px_20px_0_0_#64ffda]  
             hover:shadow-[15px_15px_0_-2px_#0A192F,15px_15px_0_0_#64ffda] ease-in duration-150 rounded-md transition-all bg-[#64ffda]' 
             initial={{ opacity: 0, translateY: -20 }} whileInView={{ opacity: 1, translateY: 0 }} transition={{ delay: 0.2, duration: 0.25 }}>
                 <img src={pic.src} alt='this is me' className='w-[300px] md:w-[350px] h-auto rounded-md mix-blend-multiply 

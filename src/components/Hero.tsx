@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
     }
 
     return (
-        <div className='h-screen flex items-center px-[20px] sm:px-0 mb-[100px] md:mb-0'>
+        <div className='h-screen flex items-center px-[40px] sm:px-0 md:pl-[100px] mb-[100px] md:mb-0'>
             <div className='flex flex-col mx-auto w-fit'>
                 <motion.span className='font-plex text-[#64ffda] text-lg'
                     variants={variants} animate={animate && 'render'} initial={{ opacity: 0, translateY: -20 }} transition={{ delay: 0.4, duration: 0.25 }}>
@@ -21,12 +21,12 @@ const Hero: React.FC = () => {
                 </motion.span>
 
                 <div className='font-inter mt-[15px]'>
-                    <motion.h1 className='text-[#ccd6f6] text-5xl md:text-7xl font-bold ml-[-5px]'
+                    <motion.h1 className='text-[#ccd6f6] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold ml-[-5px]'
                         variants={variants} animate={animate && 'render'} initial={{ opacity: 0, translateY: -20 }} transition={{ delay: 0.5, duration: 0.25 }}>
                         Bautista Sánchez.
                     </motion.h1>
 
-                    <motion.h1 className='text-[#8892b0] text-5xl md:text-7xl font-bold ml-[-5px]'
+                    <motion.h1 className='text-[#8892b0] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold ml-[-5px]'
                         variants={variants} animate={animate && 'render'} initial={{ opacity: 0, translateY: -20 }} transition={{ delay: 0.6, duration: 0.25 }}>
                         Full-stack Web Developer.
                     </motion.h1>

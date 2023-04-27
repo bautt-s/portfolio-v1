@@ -9,7 +9,7 @@ const Contact: React.FC = () => {
                 initial={{ opacity: 0, translateY: 20 }} whileInView={{ opacity: 1, translateY: 0 }} transition={{ delay: 0.2, duration: 0.25 }}>
                 <h3 className="font-plex text-[#64ffda]">04. What&apos;s next?</h3>
                 <h1 className="font-bold text-[#ccd6f6] text-4xl md:text-6xl mt-[15px]">Get in Touch</h1>
-                <p className="w-[480px] sm:w-[650px] text-[#8892b0] mt-[30px]">
+                <p className="w-[480px] sm:w-[650px] md:w-[500px] text-[#8892b0] mt-[30px]">
                     As of right now, I am looking for my first opportunity as a Web Developer. So if you liked my
                     portfolio and want to reach out, my inbox is open. Wether you want to discuss a job opening,
                     have a question or just want to say hi, I will get back at you!

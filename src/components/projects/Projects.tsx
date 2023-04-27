@@ -11,12 +11,12 @@ const Projects: React.FC = () => {
     return (
         <div className='flex flex-row items-center justify-center pb-[240px] ml-0 md:ml-[80px] font-inter px-[50px] md:px-0' id='projects'>
             <div className="w-fit">
-            <h1 className="text-[#ccd6f6] text-2xl md:text-3xl font-bold font-inter flex items-center after:content-[''] after:flex-1 after:ml-[10px] after:h-[1px] after:bg-[#324158]">
+            <h1 className="text-[#ccd6f6] text-2xl md:text-3xl font-bold font-inter flex items-center after:content-[''] after:flex-1 after:ml-[10px] after:h-[1px] after:bg-[#324158] md:mr-[80px] lg:w-[700px]">
                     <span><strong className="font-plex text-[#64ffda] text-xl md:text-2xl">03.</strong> Projects</span>
                 </h1>
 
 
-                <div className='space-y-0 md:space-y-[120px]'>
+                <div className='space-y-0 md:space-y-[40px] lg:space-y-[120px]'>
                     { /* first project */}
                     <ProjectCard
                         img={paws.src}

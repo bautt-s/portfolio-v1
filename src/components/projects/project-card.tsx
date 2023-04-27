@@ -18,14 +18,14 @@ const ProjectCard: React.FC<CardProps> = (props) => {
 
     return (
         <div>
-            <motion.div className='flex-row mt-[50px] hidden md:flex'
+            <motion.div className='flex-row md:mt-[20px] lg:mt-[50px] hidden md:flex justify-center -z-1'
                 initial={{ opacity: 0, translateY: 40 }} whileInView={{ opacity: 1, translateY: 0 }} transition={{ delay: 0.2, duration: 0.45 }}>
-                {orientationLeft && <div className='bg-[#45cac4] rounded-lg'>
-                    <img src={img} className='w-[600px] h-auto rounded-md mix-blend-multiply grayscale opacity-70 hover:opacity-100
+                {orientationLeft && <div className='bg-[#45cac4] rounded-lg md:w-[400px] md:h-[240px] md:mt-[50px] md:relative md:left-[80px] lg:w-fit lg:h-fit lg:mt-0 lg:static lg:left-0'>
+                    <img src={img} className='w-[600px] lg:h-auto rounded-md mix-blend-multiply grayscale opacity-70 hover:opacity-100
                     brightness-125 hover:mix-blend-normal hover:grayscale-0 hover:brightness-100 transition-all duration-300' />
                 </div>}
 
-                <div className={`flex flex-col ${orientationLeft ? 'text-right relative right-[80px]' : 'text-left z-20'}`}>
+                <div className={`flex flex-col ${orientationLeft ? 'text-right relative md:right-[160px] lg:right-[80px] md:mt-[20px] lg:mt-0' : 'text-left z-20 relative md:left-[80px] lg:static md:mt-[50px] lg:mt-0'}`}>
                     <div className='flex flex-col mb-[25px]'>
                         <span className='text-[#64ffda] font-plex text-sm'>Featured Project</span>
                         <a href={deploy}
@@ -34,7 +34,7 @@ const ProjectCard: React.FC<CardProps> = (props) => {
                         </a>
                     </div>
 
-                    <div className='bg-[#112240] w-[500px] text-[#a8b2d1] py-[30px] px-[25px] rounded-md shadow-lg hover:shadow-2xl transition-all duration-300'>
+                    <div className='bg-[#112240] md:w-[480px] lg:w-[500px] text-[#a8b2d1] py-[30px] px-[25px] rounded-md shadow-lg hover:shadow-2xl transition-all duration-300'>
                         {text}
                     </div>
 
@@ -55,7 +55,7 @@ const ProjectCard: React.FC<CardProps> = (props) => {
                     </div>
                 </div>
 
-                {!orientationLeft && <div className='bg-[#45cac4] rounded-lg relative right-[80px] z-10'>
+                {!orientationLeft && <div className='bg-[#45cac4] rounded-lg relative md:right-[160px] lg:right-[80px] z-10 md:w-[400px] md:h-[240px] md:mt-[50px] lg:w-fit lg:h-fit lg:mt-0'>
                     <img src={img} className='w-[600px] h-auto rounded-md mix-blend-multiply grayscale opacity-70 hover:opacity-100
                     brightness-125 hover:mix-blend-normal hover:grayscale-0 hover:brightness-100 transition-all duration-300' />
                 </div>}

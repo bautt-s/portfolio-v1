@@ -33,7 +33,7 @@ const EducationText: React.FC<EduProps> = (props) => {
                     return (
                         <div key={index} className="flex flex-row mt-[15px] items-start">
                             <RxTriangleRight className='text-[#64ffda] text-lg mt-[4px]' />
-                            <p className="text-[#8892b0] ml-[10px] sm:w-fit md:w-[550px]">{info}</p>
+                            <p className="text-[#8892b0] ml-[10px] sm:w-fit lg:w-[550px]">{info}</p>
                         </div>
                     )
                 })}

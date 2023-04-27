@@ -74,10 +74,10 @@ const Education: React.FC = () => {
     const items = ['Henry', 'Computer Science', 'English Level', 'High School']
 
     return (
-        <div className='h-fit flex flex-col sm:items-center mt-[180px] pb-[200px] sm:pb-[280px] px-[50px] md:px-0' id="education">
+        <div className='h-fit flex flex-col sm:items-center mt-[180px] pb-[200px] sm:pb-[280px] px-[50px] md:px-[70px] lg:px-0' id="education">
             <motion.div className="sm:w-fit"
             initial={{ opacity: 0, translateY: -20 }} whileInView={{ opacity: 1, translateY: 0 }} transition={{ delay: 0.2, duration: 0.25 }}>
-                <h1 className="text-[#ccd6f6] text-2xl md:text-3xl font-bold font-inter flex items-center after:content-[''] after:flex-1 after:ml-[10px] after:h-[1px] after:bg-[#324158]">
+                <h1 className="text-[#ccd6f6] text-2xl md:text-3xl font-bold font-inter flex items-center after:content-[''] after:flex-1 after:ml-[10px] after:h-[1px] after:bg-[#324158] lg:w-[650px]">
                     <span><strong className="font-plex text-[#64ffda] text-xl md:text-2xl">02.</strong> Education</span>
                 </h1>
 
