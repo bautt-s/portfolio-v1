@@ -28,7 +28,7 @@ const About: React.FC = () => {
                     <strong className='text-[#64ffda] font-normal'> reliable</strong>, 
                     <strong className='text-[#64ffda] font-normal'> pretty</strong> products and digital experiences to users. <br /><br />
 
-                    Here a few technologies I've been working with recently:
+                    Here a few technologies I&apos;ve been working with recently:
                 </p>
 
                 <div className='grid grid-cols-2 mt-[20px]'>
