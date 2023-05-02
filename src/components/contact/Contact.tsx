@@ -4,7 +4,7 @@ import { FiGithub, FiInstagram, FiLinkedin } from 'react-icons/fi'
 
 const Contact: React.FC = () => {
     return (
-        <div className="flex flex-row items-center justify-center pb-[40px] font-inter" id='contact'>
+        <div className="flex flex-row items-center justify-center pb-[40px] font-inter">
             <motion.div className="w-fit text-center"
                 initial={{ opacity: 0, translateY: 20 }} whileInView={{ opacity: 1, translateY: 0 }} transition={{ delay: 0.2, duration: 0.25 }}>
                 <h3 className="font-plex text-[#64ffda]">04. What&apos;s next?</h3>
@@ -21,7 +21,7 @@ const Contact: React.FC = () => {
                 </button>
 
                 <div className="flex flex-col font-plex text-xs text-[#8892b0] mt-[240px]">
-                    <div className="flex flex-row mx-auto mb-[30px]">
+                    <div className="flex flex-row mx-auto mb-[30px] md:hidden">
                         <Link href='https://github.com/bautt-s'>
                             <FiGithub className='text-[#ccd6f6] text-xl hover:text-[#64ffda] transition-all duration-300' />
                         </Link>

@@ -1,4 +1,4 @@
-import pic from '../assets/me.png'
+import pic from '../../assets/me.png'
 import { motion } from 'framer-motion'
 import { RxTriangleRight } from 'react-icons/rx'
 
@@ -6,7 +6,7 @@ const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'Node.js', 'MongoDB'
 
 const About: React.FC = () => {
     return (
-        <div className='h-screen flex flex-col lg:flex-row items-center justify-center' id="about">
+        <div className='h-screen flex flex-col lg:flex-row items-center justify-center'>
             <motion.div className="w-fit px-[50px] md:px-0"
             initial={{ opacity: 0, translateY: -20 }} whileInView={{ opacity: 1, translateY: 0 }} transition={{ delay: 0.2, duration: 0.25 }}>
                 <h1 className="text-[#ccd6f6] text-2xl md:text-3xl font-bold font-inter flex items-center after:content-[''] after:flex-1 after:ml-[10px] after:h-[1px] after:bg-[#324158]">
