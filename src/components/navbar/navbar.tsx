@@ -1,4 +1,4 @@
-import logo from '../../assets/logo2.png'
+import logo from '../../assets/logo.png'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { BiMenuAltRight } from 'react-icons/bi'
@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
     })
 
     return (
-        <div className={`w-full fixed px-[40px] flex flex-row items-center bg-[#0a192fd5] backdrop-blur-md z-50 
+        <div className={`w-full fixed px-[40px] flex flex-row items-center bg-[var(--background)] backdrop-blur-md z-50 
                         transition-all duration-300 ${visible ? 'h-[80px]' : 'h-0'} ${prevScrollPos && 'shadow-2xl'}`}>
             <Link href='/' className={visible ? 'contents' : 'hidden'}>
                 <motion.img src={logo.src} className='w-[50px] h-auto'
@@ -44,76 +44,76 @@ const Navbar: React.FC = () => {
             </Link>
 
             <div className={`flex-row ml-auto items-center hidden ${visible ? 'md:flex' : 'md:hidden'}`}>
-                <ul className='font-plex flex flex-row md:text-xs lg:text-sm text-[#ccd6f6]'>
-                    <motion.li className='hover:text-[#64ffda] transition-colors duration-300'
+                <ul className='font-plex flex flex-row md:text-xs lg:text-sm text-[var(--text-col)]'>
+                    <motion.li className='hover:text-[var(--primary-col)] transition-colors duration-300'
                         initial={{ opacity: 0, translateY: -20 }} variants={variants} animate={animate && 'render'} transition={{ delay: 0.2, duration: 0.25 }}>
-                        <a href='#about'><strong className='text-[#64ffda]'>01. </strong>About</a>
+                        <a href='#about'><strong className='text-[var(--primary-col)]'>01. </strong>About</a>
                     </motion.li>
 
-                    <motion.li className='ml-[25px] hover:text-[#64ffda] transition-colors duration-300'
+                    <motion.li className='ml-[25px] hover:text-[var(--primary-col)] transition-colors duration-300'
                         initial={{ opacity: 0, translateY: -20 }} variants={variants} animate={animate && 'render'} transition={{ delay: 0.4, duration: 0.25 }}>
-                        <a href='#education'><strong className='text-[#64ffda]'>02. </strong>Education</a>
+                        <a href='#education'><strong className='text-[var(--primary-col)]'>02. </strong>Education</a>
                     </motion.li>
 
-                    <motion.li className='ml-[25px] hover:text-[#64ffda] transition-colors duration-300'
+                    <motion.li className='ml-[25px] hover:text-[var(--primary-col)] transition-colors duration-300'
                         initial={{ opacity: 0, translateY: -20 }} variants={variants} animate={animate && 'render'} transition={{ delay: 0.6, duration: 0.25 }}>
-                        <a href='#projects'><strong className='text-[#64ffda]'>03. </strong>Projects</a>
+                        <a href='#projects'><strong className='text-[var(--primary-col)]'>03. </strong>Projects</a>
                     </motion.li>
 
-                    <motion.li className='ml-[25px] hover:text-[#64ffda] transition-colors duration-300'
+                    <motion.li className='ml-[25px] hover:text-[var(--primary-col)] transition-colors duration-300'
                         initial={{ opacity: 0, translateY: -20 }} variants={variants} animate={animate && 'render'} transition={{ delay: 0.8, duration: 0.25 }}>
-                        <a href='#contact'><strong className='text-[#64ffda]'>04. </strong>Contact</a>
+                        <a href='#contact'><strong className='text-[var(--primary-col)]'>04. </strong>Contact</a>
                     </motion.li>
                 </ul>
 
                 <motion.div initial={{ opacity: 0, translateY: -20 }} variants={variants} animate={animate && 'render'} transition={{ delay: 0.8, duration: 0.25 }}>
-                    <button className='text-[#64ffda] border-[#64ffda] border-[1px] rounded w-[80px] h-[40px] font-plex text-sm ml-[25px]
-                hover:shadow-[5px_5px_0_-2px_#64ffda] hover:translate-x-[-5px] hover:translate-y-[-5px] transition-all duration-300'>
+                    <button className='text-[var(--primary-col)] border-[var(--primary-col)] border-[1px] rounded w-[80px] h-[40px] font-plex text-sm ml-[25px]
+                hover:shadow-[5px_5px_0_-2px_var(--primary-col)] hover:translate-x-[-5px] hover:translate-y-[-5px] transition-all duration-300'>
                         <a href='https://drive.google.com/file/d/1LQ3-t-Y0km4z_H-F2uvXUFr-GHJrQihY/view' target='_blank'>Resume</a>
                     </button>
                 </motion.div>
             </div>
 
-            <div className='flex md:hidden ml-auto'>
+            <div className={`md:hidden ml-auto ${visible ? 'flex' : 'hidden'}`}>
                 <button onClick={handleMenu} className='z-50'>
-                    <BiMenuAltRight className='text-[#64ffda] text-5xl' />
+                    <BiMenuAltRight className='text-[var(--primary-col)] text-5xl' />
                 </button>
             </div>
 
 
-            <div className={`fixed right-0 top-0 h-screen z-40 md:hidden w-full ${menu && 'backdrop-blur-sm '}`}>
-                <div className={`ml-auto ${menu ? 'w-2/3' : 'w-0'} h-screen bg-[#102241] flex flex-col justify-center transition-all duration-300`}>
-                    <ul className={`flex-col text-[#ccd6f6] text-lg font-plex space-y-[40px] justify-center items-center ${menu ? 'flex' : 'hidden'}`}>
-                        <li className='hover:text-[#64ffda] transition-colors duration-300'>
+            <div className={`fixed right-0 top-0 h-screen z-40 md:hidden w-full ${menu ? 'backdrop-blur-sm' : 'pointer-events-none'}`}>
+                <div className={`ml-auto ${menu ? 'w-2/3' : 'w-0'} h-screen bg-[var(--secondary-col)] flex flex-col justify-center transition-all duration-300`}>
+                    <ul className={`flex-col text-[var(--text-col)] text-lg font-plex space-y-[40px] justify-center items-center ${menu ? 'flex' : 'hidden'}`}>
+                        <li className='hover:text-[var(--primary-col)] transition-colors duration-300'>
                             <button onClick={handleMenu}>
-                                <a href='#about' className='flex flex-col items-center'><strong className='text-[#64ffda]'>01. </strong>About</a>
+                                <a href='#about' className='flex flex-col items-center'><strong className='text-[var(--primary-col)]'>01. </strong>About</a>
                             </button>
 
                         </li>
 
-                        <li className='hover:text-[#64ffda] transition-colors duration-300'>
+                        <li className='hover:text-[var(--primary-col)] transition-colors duration-300'>
                             <button onClick={handleMenu}>
-                                <a href='#education' className='flex flex-col items-center'><strong className='text-[#64ffda]'>02. </strong>Education</a>
+                                <a href='#education' className='flex flex-col items-center'><strong className='text-[var(--primary-col)]'>02. </strong>Education</a>
                             </button>
 
                         </li>
 
-                        <li className='hover:text-[#64ffda] transition-colors duration-300'>
+                        <li className='hover:text-[var(--primary-col)] transition-colors duration-300'>
                             <button onClick={handleMenu}>
-                                <a href='#projects' className='flex flex-col items-center'><strong className='text-[#64ffda]'>03. </strong>Projects</a>
+                                <a href='#projects' className='flex flex-col items-center'><strong className='text-[var(--primary-col)]'>03. </strong>Projects</a>
                             </button>
 
                         </li>
 
-                        <li className='hover:text-[#64ffda] transition-colors duration-300'>
+                        <li className='hover:text-[var(--primary-col)] transition-colors duration-300'>
                             <button onClick={handleMenu}>
-                                <a href='#contact' className='flex flex-col items-center'><strong className='text-[#64ffda]'>04. </strong>Contact</a>
+                                <a href='#contact' className='flex flex-col items-center'><strong className='text-[var(--primary-col)]'>04. </strong>Contact</a>
                             </button>
                         </li>
 
                         <li>
-                            <button className='text-[#64ffda] border-[#64ffda] border-[1px] rounded w-[160px] h-[60px] font-plex text-sm
-                                hover:shadow-[5px_5px_0_-2px_#64ffda] hover:translate-x-[-5px] hover:translate-y-[-5px] transition-all duration-300 mt-[40px]'>
+                            <button className='text-[var(--primary-col)] border-[var(--primary-col)] border-[1px] rounded w-[160px] h-[60px] font-plex text-sm
+                                hover:shadow-[5px_5px_0_-2px_var(--primary-col)] hover:translate-x-[-5px] hover:translate-y-[-5px] transition-all duration-300 mt-[40px]'>
                                 <a href='https://drive.google.com/file/d/1LQ3-t-Y0km4z_H-F2uvXUFr-GHJrQihY/view' target='_blank'>Resume</a>
                             </button>
                         </li>

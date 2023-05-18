@@ -14,7 +14,7 @@ export default function Home() {
                 <title>Bautista Sánchez</title>
             </Head>
 
-            <div className='bg-[#0a192f] antialiased'>
+            <div className='bg-[var(--background)] antialiased'>
                 <Navbar />
                 <Overlay />
                 <Hero />

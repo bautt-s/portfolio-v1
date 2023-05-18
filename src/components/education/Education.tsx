@@ -77,8 +77,8 @@ const Education: React.FC = () => {
         <div className='h-fit flex flex-col sm:items-center pt-[180px] mb-[200px] sm:mb-[280px] px-[50px] md:px-[70px] lg:px-0'>
             <motion.div className="sm:w-fit"
             initial={{ opacity: 0, translateY: -20 }} whileInView={{ opacity: 1, translateY: 0 }} transition={{ delay: 0.2, duration: 0.25 }}>
-                <h1 className="text-[#ccd6f6] text-2xl md:text-3xl font-bold font-inter flex items-center after:content-[''] after:flex-1 after:ml-[10px] after:h-[1px] after:bg-[#324158] lg:w-[650px]">
-                    <span><strong className="font-plex text-[#64ffda] text-xl md:text-2xl">02.</strong> Education</span>
+                <h1 className="text-[var(--text-col)] text-2xl md:text-3xl font-bold font-inter flex items-center after:content-[''] after:flex-1 after:ml-[10px] after:h-[1px] after:bg-[#324158] lg:w-[650px]">
+                    <span><strong className="font-plex text-[var(--primary-col)] text-xl md:text-2xl">02.</strong> Education</span>
                 </h1>
 
                 <div className="flex flex-col sm:flex-row mt-[40px]">
@@ -87,8 +87,8 @@ const Education: React.FC = () => {
                             return (
                                 <button key={index} onClick={() => handleSwitch(item)}
                                     className={`font-plex w-[180px] text-center sm:text-left px-[5px] sm:px-[20px] py-[10px] sm:border-l-2
-                                    hover:bg-[#112240] hover:text-[#64ffda] transition-all duration-300 text-sm  border-b-2 sm:border-b-0
-                                    ${(item === display.selected) ? 'bg-[#112240] text-[#64ffda] border-[#64ffda]' : 'bg-none text-[#8892b0] border-[#233554]'}`}>
+                                    hover:bg-[#12262c] hover:text-[var(--primary-col)] transition-all duration-300 text-sm  border-b-2 sm:border-b-0
+                                    ${(item === display.selected) ? 'bg-[#12262c] text-[var(--primary-col)] border-[var(--primary-col)]' : 'bg-none text-[var(--text-col-2)] border-[var(--secondary-col)]'}`}>
                                     {item}
                                 </button>
                             )
