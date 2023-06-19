@@ -53,9 +53,9 @@ const Projects: React.FC = () => {
 
 
                 <div className='space-y-0 md:space-y-[40px] lg:space-y-[120px]'>
-                    {projects.map(p => {
+                    {projects.map((p, index) => {
                         return <ProjectCard img={p.img} title={p.title} text={p.text} tech={p.tech} 
-                        github={p.github} deploy={p.deploy} orientationLeft={p.orientationLeft} />
+                        github={p.github} deploy={p.deploy} orientationLeft={p.orientationLeft} key={index} />
                     })}
                 </div>
             </div>
