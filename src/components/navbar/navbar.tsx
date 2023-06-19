@@ -28,6 +28,12 @@ const Navbar: React.FC = () => {
         render: { opacity: 1, translateY: 0 },
     }
 
+    const handleButtonClick = () => {
+        const pdfUrl = '/resume.pdf'
+        window.open(pdfUrl, '_blank')
+    };
+    
+
     useEffect(() => {
         setTimeout(() => setAnimate(true), 1000)
         window.addEventListener('scroll', handleScroll);
@@ -68,8 +74,8 @@ const Navbar: React.FC = () => {
 
                 <motion.div initial={{ opacity: 0, translateY: -20 }} variants={variants} animate={animate && 'render'} transition={{ delay: 0.8, duration: 0.25 }}>
                     <button className='text-[var(--primary-col)] border-[var(--primary-col)] border-[1px] rounded w-[80px] h-[40px] font-plex text-sm ml-[25px]
-                hover:shadow-[5px_5px_0_-2px_var(--primary-col)] hover:translate-x-[-5px] hover:translate-y-[-5px] transition-all duration-300'>
-                        <a href='https://drive.google.com/file/d/1LQ3-t-Y0km4z_H-F2uvXUFr-GHJrQihY/view' target='_blank'>Resume</a>
+                hover:shadow-[5px_5px_0_-2px_var(--primary-col)] hover:translate-x-[-5px] hover:translate-y-[-5px] transition-all duration-300' onClick={handleButtonClick}>
+                        Resume
                     </button>
                 </motion.div>
             </div>
