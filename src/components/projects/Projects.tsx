@@ -1,5 +1,7 @@
 import paws from '../../assets/pawsfounding-bg.png'
 import spillgame from '../../assets/spillgame.png'
+import cotravel from '../../assets/cotravel.png'
+import cybsec from '../../assets/cybsec.jpg'
 import artitude from '../../assets/artitude.png'
 import pups from '../../assets/fetchpups.png'
 import ProjectCard from './project-card'
@@ -37,9 +39,27 @@ const Projects: React.FC = () => {
             img: spillgame.src,
             title: 'Paint & Spill',
             text: 'A fun little project: a browser game made with JS and React, for desktop and mobile, where the player needs to fill the screen with only one color in the least amount of moves.',
-            tech: ['React', 'JavaScript', 'CSS'],
+            tech: ['React', 'TypeScript', 'Tailwind', 'CSS'],
             github: 'https://github.com/bautt-s/bautts-spill-game',
             deploy: 'https://paint-n-spill.vercel.app/',
+            orientationLeft: false
+        },
+        {
+            img: cotravel.src,
+            title: 'CoTravel - Landing Page',
+            text: 'Frontend project for a freelance client (travel agency): featuring a lot of animations and fancy styling, using Tailwind mixed with traditional CSS. Includes full responsible adaptation and dark mode colors.',
+            tech: ['React', 'TypeScript', 'Tailwind', 'CSS'],
+            github: 'https://github.com/bautt-s/cotravel-front',
+            deploy: 'https://cotravel.vercel.app/',
+            orientationLeft: true
+        },
+        {
+            img: cybsec.src,
+            title: 'CybSec - Landing Page',
+            text: 'Personal frontend concept taken from Dribbble (security agency):using Tailwind mixed with traditional CSS, includes full responsible adaptation and dark mode colors, with a nice color palette and design of components.',
+            tech: ['React', 'TypeScript', 'Tailwind', 'CSS'],
+            github: 'https://github.com/bautt-s/cybsec-front',
+            deploy: 'https://cyb-sec.vercel.app/',
             orientationLeft: false
         }
     ]

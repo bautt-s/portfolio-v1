@@ -49,7 +49,7 @@ const ProjectCard: React.FC<CardProps> = (props) => {
                             <FiGithub className='text-[var(--text-col)] text-2xl hover:text-[var(--primary-col)] transition-all duration-300' />
                         </Link>
 
-                        <Link href={deploy}>
+                        <Link href={deploy} target="_blank">
                             <IoOpenOutline className='text-[var(--text-col)] text-2xl hover:text-[var(--primary-col)] transition-all duration-300 ml-[20px]' />
                         </Link>
                     </div>
@@ -91,7 +91,7 @@ const ProjectCard: React.FC<CardProps> = (props) => {
                             <FiGithub className='text-[var(--text-col)] text-2xl hover:text-[#64ffda] transition-all duration-300' />
                         </Link>
 
-                        <Link href={deploy}>
+                        <Link href={deploy} target="_blank">
                             <IoOpenOutline className='text-[var(--text-col)] text-2xl hover:text-[#64ffda] transition-all duration-300 ml-[20px]' />
                         </Link>
                     </div>
